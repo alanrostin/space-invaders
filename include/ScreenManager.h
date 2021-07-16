@@ -26,15 +26,16 @@ class ScreenManager : public ScreenManagerRemoteControl
         ScreenManager(Vector2i res);
         void update(float fps);
         void draw(RenderWindow& window);
+        void handleInput(RenderWindow& window);
 
         // From ScreenManagerRemoteControl interface
-        void ScreenManagerRemoteControl::SwitchScreens(string screenToSwitchTo)
+        void SwitchScreens(string screenToSwitchTo)
         {
             m_CurrentScreen = "" + screenToSwitchTo;
             m_Screens[m_CurrentScreen] -> initialise();
         }
 
-        void ScreenManagerRemoteControl::loadLevelInPlayMode(string screenToLoad)
+        void loadLevelInPlayMode(string screenToLoad)
         {
             // m_LevelManager.getGameObjects().clear();
             // m_LevelManager.loadGameObjectsForPlayMode(screenToLoad);
@@ -50,4 +51,4 @@ class ScreenManager : public ScreenManagerRemoteControl
         // {
         //     return m_LevelManager;
         // }
-}
+};

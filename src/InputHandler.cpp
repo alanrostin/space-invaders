@@ -61,6 +61,11 @@ void InputHandler::handleKeyPressed(Event& event, RenderWindow& window)
 
 }
 
+void InputHandler::handleKeyReleased(Event& event, RenderWindow& window)
+{
+
+}
+
 void InputHandler::handleLeftClick(std::string& buttonInteractedWith, RenderWindow& window)
 {
 

@@ -19,7 +19,7 @@ void ScreenManager::update(float fps)
     m_Screens[m_CurrentScreen] -> update(fps);
 }
 
-void ScreenManger::draw(RenderWindow& window)
+void ScreenManager::draw(RenderWindow& window)
 {
     m_Screens[m_CurrentScreen] -> draw(window);
 }

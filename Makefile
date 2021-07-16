@@ -1,12 +1,12 @@
 CXX		  := g++
-CXX_FLAGS := -Wall -Wextra -std=c++17 -ggdb
+CXX_FLAGS := -Wall -Wextra -std=c++14 -ggdb
 
 BIN		:= bin
 SRC		:= src
 INCLUDE	:= include
 LIB		:= lib
 
-LIBRARIES	:= -lsfml-graphics -lsfml-audio -lsfml-window -lsfml-system -lsfml-network
+LIBRARIES	:= -lsfml-system -lsfml-window -lsfml-graphics -lsfml-audio -lsfml-network
 EXECUTABLE	:= main
 
 

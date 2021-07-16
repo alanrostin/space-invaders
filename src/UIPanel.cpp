@@ -1,3 +1,4 @@
+#include <memory>
 #include "UIPanel.h"
 
 UIPanel::UIPanel(Vector2i res, int x, int y, 

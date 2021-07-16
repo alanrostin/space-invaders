@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <memory>
 #include <vector>
 #include "InputHandler.h"
 #include "UIPanel.h"
