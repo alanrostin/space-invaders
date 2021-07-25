@@ -23,12 +23,12 @@ class LevelManager : public GameObjectSharer
 
         // From GameObjectSharer interface
 
-        vector<GameObject>& GameObjectSharer::getGameObjectsWithGOS()
+        vector<GameObject>& getGameObjectsWithGOS()
         {
             return m_GameObjects;
         }
 
-        GameObject& GameObjectSharer::findFirstObjectWithTag(string tag)
+        GameObject& findFirstObjectWithTag(string tag)
         {
             auto it = m_GameObjects.begin();
             auto end = m_GameObjects.end();
@@ -40,9 +40,9 @@ class LevelManager : public GameObjectSharer
                     return (*it);
                 }
             }
-    #ifdef debuggingErrors
-        cout << "LevelManager.h findFirstGameObjectWithTag() " << "- Tag not found error!" << endl;
-    #endif
+#ifdef debuggingErrors
+    cout << "LevelManager.h findFirstGameObjectWithTag() " << "- Tag not found error!" << endl;
+#endif
 
             return m_GameObjects[0];
         }

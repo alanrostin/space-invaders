@@ -26,7 +26,7 @@ class RectColliderComponent : public ColliderComponent
             return m_SpecificType;
         }
 
-        void Component::start(GameObjectSharer* gos, GameObject* self)
+        void start(GameObjectSharer* gos, GameObject* self)
         {
             
         }

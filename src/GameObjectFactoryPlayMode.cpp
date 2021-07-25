@@ -1,5 +1,6 @@
 #include "GameObjectFactoryPlayMode.h"
 #include <iostream>
+#include <memory>
 #include "TransformComponent.h"
 #include "StandardGraphicsComponent.h"
 #include "PlayerUpdateComponent.h"
@@ -18,7 +19,7 @@ void GameObjectFactoryPlayMode::buildGameObject(
 
     for (it; it != end; ++it)
     {
-        if (*it = "Transform")
+        if (*it == "Transform")
         {
             gameObject.addComponent(make_shared<TransformComponent>(
                 bp.getWidth(), bp.getHeight(), Vector2f(bp.getLocationX(), bp.getLocationY())));

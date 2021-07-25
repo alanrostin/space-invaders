@@ -4,13 +4,14 @@
 #include "GameObjectSharer.h"
 #include "RectColliderComponent.h"
 #include "GameObject.h"
+#include <memory>
 
 class BulletUpdateComponent : public UpdateComponent
 {
     private:
         string m_SpecificType = "bullet";
         shared_ptr<TransformComponent> m_TC;
-        shared_ptr<RectColliderComponent> m_RC;
+        shared_ptr<RectColliderComponent> m_RCC;
 
         float m_Speed = 75.0f;
 
@@ -31,12 +32,12 @@ class BulletUpdateComponent : public UpdateComponent
 
         // From Component interface base class
 
-        string Component::getSpecificType()
+        string getSpecificType()
         {
             return m_SpecificType;
         }
 
-        void Component::start(GameObjectSharer* gos, GameObject* self)
+        void start(GameObjectSharer* gos, GameObject* self)
         {
             // Where is this specific invader
             m_TC = static_pointer_cast<TransformComponent>(

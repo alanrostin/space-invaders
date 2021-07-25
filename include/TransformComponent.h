@@ -23,33 +23,33 @@ class TransformComponent : public Component
 
         // From Component interface
 
-        string Component::getType()
+        string getType()
         {
             return m_Type;
         }
 
-        string Component::getSpecificType()
+        string getSpecificType()
         {
             // Only one type of Transform so just return m_Type
             return m_Type;
         }
 
-        void Component::disableComponent()
+        void disableComponent()
         {
 
         }
 
-        void Component::enableComponent()
+        void enableComponent()
         {
 
         }
 
-        bool Component::enabled()
+        bool enabled()
         {
             return false;
         }
 
-        void Component::start(GameObjectSharer* gos, GameObject* self)
+        void start(GameObjectSharer* gos, GameObject* self)
         {
 
         }

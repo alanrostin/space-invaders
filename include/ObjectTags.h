@@ -3,7 +3,7 @@
 
 using namespace std;
 
-static class ObjectTags
+class ObjectTags
 {
     public:
         static const string START_OF_OBJECT;

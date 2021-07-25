@@ -1,6 +1,7 @@
 #pragma once
 #include "Component.h"
 #include "GraphicsComponent.h"
+#include <memory>
 #include <string>
 
 class Component;
@@ -15,12 +16,12 @@ class StandardGraphicsComponent : public GraphicsComponent
 
         // From Component interface base class
 
-        string Component::getSpecificType()
+        string getSpecificType()
         {
             return m_SpecificType;
         }
 
-        void Component::start(
+        void start(
             GameObjectSharer* gos, GameObject* self)
         {
 

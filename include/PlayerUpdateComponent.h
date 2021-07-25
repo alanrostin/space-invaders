@@ -4,6 +4,7 @@
 #include "GameObjectSharer.h"
 #include "RectColliderComponent.h"
 #include "GameObject.h"
+#include <memory>
 
 class PlayerUpdateComponent : public UpdateComponent
 {
@@ -35,14 +36,14 @@ class PlayerUpdateComponent : public UpdateComponent
 
         // From Component interface base class
 
-        string Component::getSpecificType()
+        string getSpecificType()
         {
             return m_SpecificType;
         }
 
-        void Component::start(GameObjectSharer* gos, GameObject* self)
+        void start(GameObjectSharer* gos, GameObject* self)
         {
-            m_TC -> static_pointer_cast<TransformComponent>(self -> 
+            m_TC = static_pointer_cast<TransformComponent>(self -> 
                 getComponentByTypeAndSpecificType("transform", "transform"));
             
             m_RCC = static_pointer_cast<RectColliderComponent>(self -> 

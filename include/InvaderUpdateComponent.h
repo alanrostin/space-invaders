@@ -4,6 +4,7 @@
 #include "GameObjectSharer.h"
 #include "RectColliderComponent.h"
 #include "GameObject.h"
+#include <memory>
 
 class BulletSpawner;
 
@@ -34,12 +35,12 @@ class InvaderUpdateComponent : public UpdateComponent
 
         // From Component interface base class
 
-        string Component::getSpecificType()
+        string getSpecificType()
         {
             return m_SpecificType;
         }
 
-        void Component::start(GameObjectSharer* gos, GameObject* self)
+        void start(GameObjectSharer* gos, GameObject* self)
         {
             // Where is the player
             m_PlayerTC = static_pointer_cast<TransformComponent>(

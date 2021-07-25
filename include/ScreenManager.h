@@ -43,7 +43,7 @@ class ScreenManager : public ScreenManagerRemoteControl
             SwitchScreens("Game");
         }
 
-        vector<GameObject>& ScreenManagerRemoteControl::getGameObjects()
+        vector<GameObject>& getGameObjects()
         {
             return m_LevelManager.getGameObjects();
         }

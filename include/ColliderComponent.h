@@ -11,27 +11,27 @@ class ColliderComponent : public Component
     public:
         // From Component interface
 
-        string Component::getType()
+        string getType()
         {
             return m_Type;
         }
 
-        void Component::disableComponent()
+        void disableComponent()
         {
             m_Enabled = false;
         }
 
-        void Component::enableComponent()
+        void enableComponent()
         {
             m_Enabled = true;
         }
 
-        bool Component::enabled()
+        bool enabled()
         {
             return m_Enabled;
         }
 
-        void Component::start(GameObjectSharer* gos, GameObject* self)
+        void start(GameObjectSharer* gos, GameObject* self)
         {
 
         }

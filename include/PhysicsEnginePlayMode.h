@@ -1,6 +1,7 @@
 #pragma once
 #include "GameObjectSharer.h"
 #include "PlayerUpdateComponent.h"
+#include <memory>
 
 class PhysicsEnginePlayMode
 {

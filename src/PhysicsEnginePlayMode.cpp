@@ -1,6 +1,7 @@
 #include "DevelopState.h"
 #include "PhysicsEnginePlayMode.h"
 #include <iostream>
+#include <memory>
 #include "SoundEngine.h"
 #include "WorldState.h"
 #include "InvaderUpdateComponent.h"
@@ -27,9 +28,9 @@ void PhysicsEnginePlayMode::detectInvaderCollisions(
             for (bulletIt; bulletIt != bulletEnd; ++bulletIt)
             {
                 if ((*invaderIt).getEncompassingRectCollider().intersects((*bulletIt)
-                    .getEncompassingRectCollider()) && (*bulletIt).getTag() == "bullet" && 
-                    static_pointer_cast<BulletUpdateComponent>(*bulletIt)
-                    .getFirstUpdateComponent() -> m_BelongsToPlayer)
+                    .getEncompassingRectCollider()) && (*bulletIt).getTag() == "bullet" 
+                    && static_pointer_cast<BulletUpdateComponent>((*bulletIt)
+                    .getFirstUpdateComponent()) -> m_BelongsToPlayer)
                 {
                     SoundEngine::playInvaderExplode();
 
